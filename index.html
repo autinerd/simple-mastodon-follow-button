@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Simple Mastodon Follow button</title>
+		<link rel="stylesheet" href="index.css">
+		<!-- These two lines are neeeded for the follow button to work -->
+		<link rel="stylesheet" href="mastodonFollow.css">
+		<script src="mastodonFollow.js"></script>
+		<!-- End -->
+	</head>
+	<body>
+		<h1>Simple Mastodon follow button</h1>
+		<h2>Follow me via remote follow:</h2>
+		<p>
+			<!-- Insert the button -->
+			<button class="mastodon-follow" data-followtype="remote" data-account="@autinerd@chaos.social"></button>
+		</p>
+		<h2>Follow me directly:</h2>		
+		<p>
+			<!-- Insert the button -->
+			<button class="mastodon-follow" data-followtype="direct" data-account="@autinerd@chaos.social"></button>
+		</p>
+		<h2>Contribute</h2>
+		<a href="https://github.com/autinerd/simple-mastodon-follow-button">https://github.com/autinerd/simple-mastodon-follow-button</a>
+	</body>
+</html>

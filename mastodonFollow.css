@@ -1,0 +1,24 @@
+.mastodon-follow {
+	background-color: #3c99dc;
+	color: white;
+	border-radius: 5px;
+	border: #888 solid 1px;
+	font-size: 13pt;
+	height: 32px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.mastodon-follow:hover {
+	cursor: pointer;
+	background-color: #2c89cc;
+}
+
+.mastodon-follow:active {
+	background-color: #1c79bc;
+}
+
+.mastodon-follow-logo {
+	color: white;
+	width: 16px;
+	margin-top: 2px;
+}
