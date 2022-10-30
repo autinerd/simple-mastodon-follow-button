@@ -16,7 +16,7 @@ function mastodonFollowButtonClick(e) {
 		window.open(`https://${encodeURIComponent(instance)}/users/${encodeURIComponent(username)}/remote_follow`, '_blank');
 	}
 	else if (btn.attributes['data-followtype'].value === "direct") {
-		const mastodonInstance = prompt(`Following "${btn.attributes['data-account']}"\nPlease enter your Mastodon instance (e.g. mastodon.social) for following`);
+		const mastodonInstance = prompt(`Following "${btn.attributes['data-account'].value}"\nPlease enter your Mastodon instance (e.g. mastodon.social) for following`);
 		if (mastodonInstance == null) {
 			return;
 		}
