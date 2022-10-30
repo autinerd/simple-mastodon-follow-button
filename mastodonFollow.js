@@ -4,18 +4,18 @@ function mastodonFollowButtonClick(e) {
 		console.error("Follow type and account are required to make this button working!");
 		return;
 	}
-	if (!(/^@[^@]+@[^\.]+\..+$/.test(btn.attributes['data-account']))) {
+	if (!(/^@[^@]+@[^\.]+\..+$/.test(btn.attributes['data-account'].value))) {
 		console.error('The account has to be in the format @username@instance.social!');
 		return;
 	}
-	const accountresult = /^@([^@]+)@([^\.]+\..+)$/.exec(btn.attributes['data-account']);
+	const accountresult = /^@([^@]+)@([^\.]+\..+)$/.exec(btn.attributes['data-account'].value);
 	const instance = accountresult[2];
 	const username = accountresult[1];
 
-	if (btn.attributes['data-followtype'] === "remote") {
+	if (btn.attributes['data-followtype'].value === "remote") {
 		window.open(`https://${encodeURIComponent(instance)}/users/${encodeURIComponent(username)}/remote_follow`, '_blank');
 	}
-	else if (btn.attributes['data-followtype'] === "direct") {
+	else if (btn.attributes['data-followtype'].value === "direct") {
 		const mastodonInstance = prompt(`Following "${btn.attributes['data-account']}"\nPlease enter your Mastodon instance (e.g. mastodon.social) for following`);
 		if (mastodonInstance == null) {
 			return;
